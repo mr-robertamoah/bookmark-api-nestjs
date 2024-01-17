@@ -45,8 +45,18 @@ $ npm run test:e2e
 
 ## Endpoints
 
-- /auth/signup (for registering a user) *returns object with access_token*
-- /auth/signin (for signing in a user) *returns object with access_token*
+Authorization
+- /auth/signup  POST  (for registering a user)  *returns object with access_token key*
+- /auth/signin  POST  (for signing in a user)   *returns object with access_token key*
+User Information **(bearer token required)**
+- /user/me  GET    (getting user information)  *returns user object*
+- /user  PATCH  (editing user information)  *returns user object*
+Todo **(bearer token required)**
+- /bookmarks      GET     (getting bookmarks of a user)  *returns array of bookmark*
+- /bookmarks      POST    (create a bookmark)            *returns bookmark object*
+- /bookmarks/:id  GET     (getting bookmarks of a user)  *returns bookmark object*
+- /bookmarks/:id  PATCH   (edit bookmark object)         *returns bookmark object*
+- /bookmarks/:id  DELETE  (edit bookmark object)         *returns bookmark object*
 
 ## Stay in touch
 
